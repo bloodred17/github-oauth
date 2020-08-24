@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { AuthHandlerService } from './auth-handler.service';
 @Component({
   selector: 'app-auth-handler',
   templateUrl: './auth-handler.component.html',
@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AuthHandlerComponent implements OnInit {
 
-  constructor() { }
+  constructor(private authHandler: AuthHandlerService) { }
 
   ngOnInit(): void {
+  }
+
+  auth() {
+    this.authHandler.auth();
   }
 
 }
