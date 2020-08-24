@@ -11,7 +11,7 @@ export class AuthHandlerService {
   constructor(private http: HttpClient) { }
 
   auth() {
-    return this.http.post('https://github.com/login/oauth/authorize', {
+    return this.http.get('https://github.com/login/oauth/authorize', {
       params: {
         client_id: '3da366587e2577cb7d0f',
         redirect_uri: 'https://github-oauth.netlify.app/auth'
