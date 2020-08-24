@@ -14,7 +14,8 @@ export class AuthHandlerService {
     return this.http.get('https://github.com/login/oauth/authorize', {
       params: {
         client_id: '3da366587e2577cb7d0f',
-        redirect_uri: 'https://github-oauth.netlify.app/auth'
+        redirect_uri: 'https://github-oauth.netlify.app/auth',
+        state: 'f888hc61'
       }
     }).subscribe((data) => {
       console.log(data);
